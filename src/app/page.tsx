@@ -27,8 +27,8 @@ export default async function Home() {
 
       <div className=" w-full md:h-[780px] lg:px-12 md:px-3 sm:h-[1130px] flex items-center [@media(max-width:639px)]:h-[2300px] [@media(max-width:639px)]:px-3">
         <div className=" w-full md:h-[750px] sm:flex flex-wrap space-x-1 justify-between sm:h-[1100px] sm:items-center [@media(max-width:639px)]:h-[2260px] [@media(max-width:639px)]:space-y-9 [@media(max-width:639px)]:pt-4">
-          {get.map((img: any) => (
-            <div className=" h-[340px] md:w-[25%] shadow-lg rounded-xl shadow-gray-400 sm:w-[45%] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
+          {get.map((img: any,index:number) => (
+            <div key={img.id} className=" h-[340px] md:w-[25%] shadow-lg rounded-xl shadow-gray-400 sm:w-[45%] transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 duration-300 ">
               <Link href={`/${img.id}`}>
                 <div className=" h-[280px] w-full">
                   <div>
